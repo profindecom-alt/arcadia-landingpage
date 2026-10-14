@@ -93,6 +93,8 @@ v3 = v3.replace(/<script src="assets\/(?:eleve|gallery)\.js(?:\?v=\w+)?" defer><
 if (/eleve\.js|gallery\.js/.test(v3)) throw new Error('V3 : eleve.js / gallery.js encore présents');
 // Bouton de l'appel final : « Séance d'évaluation offerte »
 v3 = must(v3, 'data-cta="final">Réserver la séance gratuite\n', 'data-cta="final">Séance d\'évaluation offerte\n');
+// Bouton du haut de page (desktop et mobile) : « Séance offerte »
+v3 = must(v3, `<span class="d-only">Séance d'essai gratuite</span><span class="m-only">Essai gratuit</span>`, 'Séance offerte');
 v3 = forSubfolder(v3, 'v3', 'Bac');
 
 // V4 : comme la V1, mais l'offre devient « séance d'orientation offerte » (plus de « 1ère séance gratuite »)
