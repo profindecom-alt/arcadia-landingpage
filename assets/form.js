@@ -32,10 +32,6 @@
     var m = d.match(/^(?:\+212|00212|212|0)([5-7]\d{8})$/);
     return m ? '+212' + m[1] : null;
   }
-  // Local Moroccan format for the call team: +212612345678 → "06 12 34 56 78".
-  function localPhone(e164) {
-    return ('0' + e164.slice(4)).replace(/^(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})$/, '$1 $2 $3 $4 $5');
-  }
 
   // Ad-set message match: ?niveau=2bac pre-selects the level in step 2.
   var NIVEAUX = { 'tc': 'T.Commun', '1bac': '1 Bac', '2bac': '2 Bac', 'autre': 'Autre' };
@@ -218,7 +214,6 @@
         lead_id: leadId,
         nom: name,
         telephone: phone,
-        telephone_local: localPhone(phone),
         telephone_saisi: tel.value.trim(),
         ville: city,
         offre: 'seance_essai_gratuite',
