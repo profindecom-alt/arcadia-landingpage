@@ -10,7 +10,7 @@ window.ARCADIA_CONFIG = {
   // Assistant de la page merci (webhook n8n, POST { chatInput, sessionId }).
   // Le workflow doit renvoyer la réponse : { "output": "..." } (nœud « Respond to Webhook »).
   // Laisser vide pour masquer l'assistant.
-  chatbotUrl: 'https://n8n.srv1019025.hstgr.cloud/webhook/600a8c7f-86d3-48f7-a1e6-a33971f9cb7c',
+  chatbotUrl: 'https://n8n.srv1019025.hstgr.cloud/webhook/arcadiabot',
 
   // Bouton WhatsApp de la page merci uniquement (la landing reste 100 % formulaire).
   // Format international sans + ni espaces. Ex. : '212612345678'. Laisser vide pour masquer le bouton.
