@@ -91,6 +91,8 @@ v3 = must(v3, '<span>Voir le centre →</span>', '<span>Nous trouver →</span>'
 v3 = v3.replace(/\n\s*<a class="nav-link" href="#faq">FAQ<\/a>/, '').replace(/\n\s*<a href="#faq">FAQ<\/a>/, '');
 v3 = v3.replace(/<script src="assets\/(?:eleve|gallery)\.js(?:\?v=\w+)?" defer><\/script>\n/g, '');
 if (/eleve\.js|gallery\.js/.test(v3)) throw new Error('V3 : eleve.js / gallery.js encore présents');
+// Bouton de l'appel final : « Séance d'évaluation offerte »
+v3 = must(v3, 'data-cta="final">Réserver la séance gratuite\n', 'data-cta="final">Séance d\'évaluation offerte\n');
 v3 = forSubfolder(v3, 'v3', 'Bac');
 
 // V4 : comme la V1, mais l'offre devient « séance d'orientation offerte » (plus de « 1ère séance gratuite »)
