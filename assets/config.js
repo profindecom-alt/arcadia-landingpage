@@ -20,7 +20,7 @@ window.ARCADIA_CONFIG = {
   thankYouUrl: '/merci.html',
 
   // Identifiants publicitaires (laisser vide pour désactiver).
-  metaPixelId: '1120152330417815',
+  metaPixelId: '1651037729770097',
   gtmId: '',         // Ex. 'GTM-XXXXXXX'
   clarityId: 'yxqbga3cwq',   // Microsoft Clarity (enregistrements de session + cartes de chaleur)
 
